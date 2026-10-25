@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Affare Fatto - Catalogo Rigatteria & Antiquariato</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f7f4ef;
+            color: #2c241d;
+        }
+        h1, h2, h3, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-[#2c241d] text-[#f7f4ef] shadow-md border-b border-[#d4af37]/30">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="bg-[#d4af37] text-[#2c241d] p-2.5 rounded-xl shadow-inner">
+                    <i data-lucide="landmark" class="w-7 h-7"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold tracking-wide text-[#f7f4ef]">L'Affare Fatto</h1>
+                    <p class="text-xs tracking-widest text-[#d4af37] uppercase font-semibold">Rigatteria, Antiquariato & Tesori d'Epoca</p>
+                </div>
+            </div>
+            <!-- Navigation Tabs -->
+            <nav class="flex bg-[#3d3229] p-1.5 rounded-xl border border-[#d4af37]/20">
+                <button onclick="switchTab('catalog')" id="btn-catalog" class="px-5 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 bg-[#d4af37] text-[#2c241d] shadow">
+                    <i data-lucide="store" class="w-4 h-4"></i> Vetrina Online
+                </button>
+                <button onclick="switchTab('admin')" id="btn-admin" class="px-5 py-2 rounded-lg font-medium text-sm transition-all flex items-center gap-2 text-[#f7f4ef] hover:text-[#d4af37]">
+                    <i data-lucide="settings" class="w-4 h-4"></i> Gestione Inventario
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 py-8">
+
+        <!-- Stats Overview -->
+        <section class="grid grid-cols
